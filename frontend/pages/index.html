@@ -215,23 +215,29 @@
                     <pre><code>
                         # Importar NumPy
                         import numpy as np
-                        
+
                         # Crear arrays NumPy
                         array_1d = np.array([1, 2, 3, 4, 5])
                         array_2d = np.array([[1, 2, 3], [4, 5, 6]])
-                        
+
                         # Operaciones matemáticas
-                        print(array_1d * 2)  # Multiplicación elemento por elemento
+                        print(array_1d * 2)  # Multiplicación
                         print(np.mean(array_1d))  # Media
                         print(np.median(array_1d))  # Mediana
-                        
-                        # Funciones de generación de arrays
-                        zeros = np.zeros((3, 3))  # Matriz de ceros
-                        ones = np.ones((2, 2))    # Matriz de unos
-                        rango = np.arange(0, 10, 2)  # Array con rango [0, 2, 4, 6, 8]
-                        
-                        # Reshaping de arrays
+
+                        # Generación de arrays
+                        zeros = np.zeros((3, 3))
+                        ones = np.ones((2, 2))
+                        rango = np.arange(0, 10, 2)
+
+                        # Cambio de forma (reshaping)
                         reshape = np.arange(12).reshape(3, 4)
+
+                        # Mostrar resultados
+                        print("Array de ceros:\n", zeros)
+                        print("Array de unos:\n", ones)
+                        print("Array con rango:\n", rango)
+                        print("Array reestructurado:\n", reshape)
                     </code></pre>
                                             
                 <h4>Ventajas de NumPy</h4>
@@ -251,34 +257,24 @@
                         <p>Implementación de medidas estadísticas usando NumPy y funciones propias.</p>
                                             
                         <pre><code>
-                        import numpy as np
-                        from statistics import mode
-                        
-                        # Conjunto de datos
-                        datos = [4, 5, 2, 7, 9, 3, 5, 5, 1, 6]
-                        
-                        # Funciones estadísticas con NumPy
-                        media = np.mean(datos)
-                        mediana = np.median(datos)
-                        
-                        # Calcular la moda
-                        def calcular_moda(datos):
-                            try:
-                                moda = mode(datos)
-                            except StatisticsError:
-                                # Si hay múltiples modas, toma la primera
-                                moda = max(set(datos), key=datos.count)
-                            return moda
-                        
-                        # Calcular estadísticas
-                        moda = calcular_moda(datos)
-                        print(f"Moda: {moda}")
-                        print(f"Media: {media}")
-                        print(f"Mediana: {mediana}")
-                        
-                        # Desviación estándar
-                        desviacion = np.std(datos)
-                        print(f"Desviación Estándar: {desviacion}")
+                            import numpy as np
+
+                            # Creamos un array de números usando NumPy
+                            l1 = np.array([10, 12, 14, 11, 12])  
+                            print(f"Lista 1: {l1}")  # Imprimimos el array
+                            
+                            print("\n.........................")  # Línea separadora para mejorar la visualización
+                            
+                            # Calculamos la moda del array.
+                            # np.bincount(l1) cuenta la frecuencia de cada número en el array.
+                            # np.argmax() devuelve el índice del número con mayor frecuencia, es decir, la moda.
+                            print(f"Moda: {np.argmax(np.bincount(l1))}")  
+                            
+                            # Calculamos la media (promedio) del array usando np.mean()
+                            print(f"Media: {np.mean(l1)}")  
+                            
+                            # Calculamos la mediana del array usando np.median()
+                            print(f"Mediana: {np.median(l1)}")  
                     </code></pre>
 
                     <h4>Palabras Reservadas Importantes</h4>
