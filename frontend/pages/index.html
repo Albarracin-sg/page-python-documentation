@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="../events/acciones.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#documentacion">Documentación</a></li>
+                <li><a href="#ejemplos">Ejemplos</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor" id="inicio">
+        <div class="section-header">
+            <h1>Fundamentos de Python</h1>
+            <p>Aprende los conceptos básicos de Python de manera clara y práctica, con ejemplos y documentación detallada.</p>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <h3><span class="card-icon">📚</span> Documentación</h3>
+                <p>Consulta la documentación detallada sobre los fundamentos de Python, sintaxis básica, tipos de datos y estructuras de control.</p>
+            </div>
+            <div class="card">
+                <h3><span class="card-icon">💻</span> Ejemplos</h3>
+                <p>Explora ejemplos prácticos de código que te ayudarán a comprender mejor los conceptos y técnicas de programación en Python.</p>
+            </div>
+            <div class="card">
+                <h3><span class="card-icon">🔗</span> Recursos</h3>
+                <p>Accede a enlaces, tutoriales y herramientas adicionales para profundizar en tu aprendizaje de Python.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor" id="documentacion">
+        <div class="section-header">
+            <h2>Documentación</h2>
+            <p>Explora la documentación completa de los fundamentos de Python</p>
+        </div>
+
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="sintaxis">Sintaxis Básica</button>
+                <button class="tab-button" data-tab="variables">Variables y Tipos</button>
+                <button class="tab-button" data-tab="estructuras">Estructuras de Control</button>
+                <button class="tab-button" data-tab="funciones">Funciones</button>
+            </div>
+
+            <div class="tab-content active" id="sintaxis">
+                <div class="doc-section">
+                    <h3>Sintaxis básica de Python</h3>
+                    <p>Python es conocido por su sintaxis limpia y legible. A diferencia de otros lenguajes de programación, utiliza la indentación para definir bloques de código.</p>
+                    <pre><code>
+                        # Este es un comentario en Python
+                        print("Hola, mundo!") # Imprime un mensaje
+
+                        # La indentación es importante
+                        if 5 > 2:
+                            print("Cinco es mayor que dos")  # Esta línea está indentada
+                    </code></pre>
+                    <p>Python es sensible a mayúsculas y minúsculas, lo que significa que <code>variable</code> y <code>Variable</code> son consideradas diferentes.</p>
+                </div>
+            </div>
+
+            <div class="tab-content" id="variables">
+                <div class="doc-section">
+                    <h3>Variables y tipos de datos</h3>
+                    <p>En Python, no es necesario declarar el tipo de variable. El tipo se asigna automáticamente cuando se asigna un valor.</p>
+                    <pre><code># Variables y tipos básicos
+                        nombre = "Ana"  # String (cadena de texto)
+                        edad = 25       # Integer (entero)
+                        altura = 1.75   # Float (decimal)
+                        es_estudiante = True  # Boolean (booleano)
+
+                        # Verificar el tipo de una variable
+                        print(type(nombre))  # <class 'str'>
+                        print(type(edad))    # <class 'int'>
+                    </code></pre>
+                    <h4>Tipos de datos principales:</h4>
+                    <ul>
+                        <li><strong>Strings (str):</strong> Para texto y caracteres</li>
+                        <li><strong>Integers (int):</strong> Números enteros</li>
+                        <li><strong>Floats (float):</strong> Números decimales</li>
+                        <li><strong>Booleans (bool):</strong> Valores verdadero (True) o falso (False)</li>
+                        <li><strong>Lists (list):</strong> Colecciones ordenadas y modificables</li>
+                        <li><strong>Tuples (tuple):</strong> Colecciones ordenadas e inmutables</li>
+                        <li><strong>Dictionaries (dict):</strong> Colecciones desordenadas con pares clave-valor</li>
+                        <li><strong>Sets (set):</strong> Colecciones desordenadas sin elementos duplicados</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content" id="estructuras">
+                <div class="doc-section">
+                    <h3>Estructuras de control</h3>
+                    <p>Las estructuras de control permiten modificar el flujo de ejecución de un programa.</p>
+                    
+                    <h4>Condicionales (if, elif, else)</h4>
+                    <pre><code>
+                        # Estructura condicional básica
+                        edad = 18
+
+                        if edad < 18:
+                            print("Eres menor de edad")
+                        elif edad == 18:
+                            print("Acabas de cumplir la mayoría de edad")
+                        else:
+                            print("Eres mayor de edad")
+                    </code></pre>
+
+                    <h4>Bucles</h4>
+                    <pre><code>
+                        # Bucle for
+                        for i in range(5):
+                            print(i)  # Imprime 0, 1, 2, 3, 4
+
+                        # Bucle while
+                        contador = 0
+                        while contador < 5:
+                            print(contador)
+                            contador += 1  # Incrementa el contador
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="tab-content" id="funciones">
+                <div class="doc-section">
+                    <h3>Funciones</h3>
+                    <p>Las funciones son bloques de código reutilizables que se ejecutan cuando son llamadas.</p>
+                    <pre><code>
+                        # Definición de una función simple
+                        def saludar(nombre):
+                            return f"Hola, {nombre}!"
+
+                        # Llamada a la función
+                        mensaje = saludar("María")
+                        print(mensaje)  # Imprime: Hola, María!
+
+                        # Función con parámetros por defecto
+                        def presentar(nombre, edad=25):
+                            return f"{nombre} tiene {edad} años."
+
+                        print(presentar("Juan"))  # Imprime: Juan tiene 25 años.
+                        print(presentar("Ana", 30))  # Imprime: Ana tiene 30 años.
+                    </code></pre>
+
+                    <h4>Funciones lambda</h4>
+                    <p>Las funciones lambda son pequeñas funciones anónimas definidas con la palabra clave <code>lambda</code>.</p>
+                    <pre><code>
+                        # Función lambda para duplicar un número
+                        duplicar = lambda x: x * 2
+
+                        print(duplicar(5))  # Imprime: 10
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor" id="arrays-numpy">
+        <div class="section-header">
+            <h2>Arrays y NumPy</h2>
+            <p>Aprende sobre arrays, la librería NumPy y cálculos estadísticos en Python</p>
+        </div>
+
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="arrays-intro">Arrays Básicos</button>
+                <button class="tab-button" data-tab="numpy-intro">NumPy</button>
+                <button class="tab-button" data-tab="estadistica">Estadística Básica</button>
+            </div>
+
+            <div class="tab-content active" id="arrays-intro">
+                <div class="doc-section">
+                    <h3>Arrays en Python</h3>
+                    <p>En Python, los arrays se pueden manejar de varias formas, siendo las listas la estructura más básica y NumPy para cálculos científicos.</p>
+                    
+                    <h4>Listas como Arrays Básicos</h4>
+                    <pre><code>
+                        # Crear una lista (array básico)
+                        numeros = [1, 2, 3, 4, 5]
+                        
+                        # Operaciones básicas
+                        print(numeros[0])    # Acceder a un elemento
+                        print(len(numeros))  # Longitud del array
+                        numeros.append(6)    # Agregar un elemento
+                        numeros.remove(3)    # Eliminar un elemento
+                        
+                        # Arrays multidimensionales
+                        matriz = [
+                            [1, 2, 3],
+                            [4, 5, 6],
+                            [7, 8, 9]
+                        ]
+                        print(matriz[1][2])  # Acceder a un elemento específico: 6
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="tab-content" id="numpy-intro">
+                <div class="doc-section">
+                    <h3>NumPy: Librería para Computación Numérica</h3>
+                    <p>NumPy es fundamental para cálculos científicos y computación numérica en Python. Es esencial para trabajar con arrays de manera eficiente.</p>
+                    
+                    <pre><code>
+                        # Importar NumPy
+                        import numpy as np
+                        
+                        # Crear arrays NumPy
+                        array_1d = np.array([1, 2, 3, 4, 5])
+                        array_2d = np.array([[1, 2, 3], [4, 5, 6]])
+                        
+                        # Operaciones matemáticas
+                        print(array_1d * 2)  # Multiplicación elemento por elemento
+                        print(np.mean(array_1d))  # Media
+                        print(np.median(array_1d))  # Mediana
+                        
+                        # Funciones de generación de arrays
+                        zeros = np.zeros((3, 3))  # Matriz de ceros
+                        ones = np.ones((2, 2))    # Matriz de unos
+                        rango = np.arange(0, 10, 2)  # Array con rango [0, 2, 4, 6, 8]
+                        
+                        # Reshaping de arrays
+                        reshape = np.arange(12).reshape(3, 4)
+                    </code></pre>
+                                            
+                <h4>Ventajas de NumPy</h4>
+                    <ul>
+                        <li>Operaciones matemáticas más rápidas</li>
+                        <li>Memoria más eficiente</li>
+                        <li>Soporte para arrays multidimensionales</li>
+                        <li>Herramienta fundamental para ciencia de datos</li>
+                    </ul>
+                </div>
+            </div>
+
+                        
+            <div class="tab-content" id="estadistica">
+                <div class="doc-section">
+                    <h3>Cálculos Estadísticos Básicos</h3>
+                        <p>Implementación de medidas estadísticas usando NumPy y funciones propias.</p>
+                                            
+                        <pre><code>
+                        import numpy as np
+                        from statistics import mode
+                        
+                        # Conjunto de datos
+                        datos = [4, 5, 2, 7, 9, 3, 5, 5, 1, 6]
+                        
+                        # Funciones estadísticas con NumPy
+                        media = np.mean(datos)
+                        mediana = np.median(datos)
+                        
+                        # Calcular la moda
+                        def calcular_moda(datos):
+                            try:
+                                moda = mode(datos)
+                            except StatisticsError:
+                                # Si hay múltiples modas, toma la primera
+                                moda = max(set(datos), key=datos.count)
+                            return moda
+                        
+                        # Calcular estadísticas
+                        moda = calcular_moda(datos)
+                        print(f"Moda: {moda}")
+                        print(f"Media: {media}")
+                        print(f"Mediana: {mediana}")
+                        
+                        # Desviación estándar
+                        desviacion = np.std(datos)
+                        print(f"Desviación Estándar: {desviacion}")
+                    </code></pre>
+
+                    <h4>Palabras Reservadas Importantes</h4>
+                    <ul>
+                        <li><strong>import:</strong> Para importar librerías externas</li>
+                        <li><strong>from:</strong> Para importar módulos específicos</li>
+                        <li><strong>def:</strong> Para definir funciones personalizadas</li>
+                        <li><strong>return:</strong> Para devolver valores de funciones</li>
+                        <li><strong>try/except:</strong> Para manejo de errores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor" id="ejemplos">
+        <div class="section-header">
+            <h2>Ejemplos Prácticos</h2>
+            <p>Aprende con ejemplos prácticos de código Python</p>
+        </div>
+
+        <div class="example">
+            <h4>Calculadora Simple</h4>
+            <p>Este ejemplo muestra cómo crear una calculadora básica utilizando funciones:</p>
+            <pre><code>
+                # Calculadora básica en Python
+                def suma(a, b):
+                    return a + b
+
+                def resta(a, b):
+                    return a - b
+
+                def multiplicacion(a, b):
+                    return a * b
+
+                def division(a, b):
+                    if b == 0:
+                        return "Error: División por cero"
+                    return a / b
+
+                # Menú de opciones
+                print("Calculadora Simple")
+                print("1. Suma")
+                print("2. Resta")
+                print("3. Multiplicación")
+                print("4. División")
+
+                opcion = int(input("Seleccione una operación (1-4): "))
+                num1 = float(input("Ingrese el primer número: "))
+                num2 = float(input("Ingrese el segundo número: "))
+
+                if opcion == 1:
+                    print(f"Resultado: {suma(num1, num2)}")
+                elif opcion == 2:
+                    print(f"Resultado: {resta(num1, num2)}")
+                elif opcion == 3:
+                    print(f"Resultado: {multiplicacion(num1, num2)}")
+                elif opcion == 4:
+                    print(f"Resultado: {division(num1, num2)}")
+                else:
+                    print("Opción no válida")
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h4>Lista de Tareas</h4>
+            <p>Un ejemplo de cómo manejar una lista de tareas usando listas y bucles:</p>
+            <pre><code>
+                # Aplicación simple de lista de tareas
+                tareas = []
+
+                def agregar_tarea(tarea):
+                    tareas.append(tarea)
+                    print(f"Tarea '{tarea}' agregada.")
+
+                def ver_tareas():
+                    if not tareas:
+                        print("No hay tareas pendientes.")
+                    else:
+                        print("Tareas pendientes:")
+                        for i, tarea in enumerate(tareas, 1):
+                            print(f"{i}. {tarea}")
+
+                def eliminar_tarea(indice):
+                    if 1 <= indice <= len(tareas):
+                        tarea_eliminada = tareas.pop(indice - 1)
+                        print(f"Tarea '{tarea_eliminada}' eliminada.")
+                    else:
+                        print("Índice no válido.")
+
+                # Ejemplo de uso
+                agregar_tarea("Estudiar Python")
+                agregar_tarea("Hacer ejercicio")
+                ver_tareas()
+                eliminar_tarea(1)
+                ver_tareas()
+            </code></pre>
+        </div>
+
+        <div class="example">
+            <h4>Análisis de Texto</h4>
+            <p>Este ejemplo muestra cómo analizar un texto para contar palabras y caracteres:</p>
+            <pre><code>
+                # Analizador de texto simple
+                def analizar_texto(texto):
+                    # Eliminar espacios adicionales
+                    texto = texto.strip()
+                    
+                    # Contar caracteres (incluidos espacios)
+                    num_caracteres = len(texto)
+                    
+                    # Contar palabras
+                    palabras = texto.split()
+                    num_palabras = len(palabras)
+                    
+                    # Contar frecuencia de palabras
+                    frecuencia = {}
+                    for palabra in palabras:
+                        palabra = palabra.lower()
+                        if palabra in frecuencia:
+                            frecuencia[palabra] += 1
+                        else:
+                            frecuencia[palabra] = 1
+                    
+                    # Palabra más común
+                    palabra_comun = max(frecuencia.items(), key=lambda x: x[1])
+                    
+                    return {
+                        "caracteres": num_caracteres,
+                        "palabras": num_palabras,
+                        "frecuencia": frecuencia,
+                        "palabra_comun": palabra_comun
+                    }
+
+                # Ejemplo de uso
+                texto_ejemplo = """
+                Python es un lenguaje de programación interpretado cuya filosofía hace hincapié 
+                en la legibilidad de su código. Es un lenguaje interpretado, dinámico y multiplataforma.
+                Python es un lenguaje muy popular para la ciencia de datos y la inteligencia artificial.
+                """
+
+                resultado = analizar_texto(texto_ejemplo)
+                print(f"Caracteres: {resultado['caracteres']}")
+                print(f"Palabras: {resultado['palabras']}")
+                print(f"Palabra más común: '{resultado['palabra_comun'][0]}' ({resultado['palabra_comun'][1]} veces)")
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="contenedor" id="recursos">
+        <div class="section-header">
+            <h2>Recursos Adicionales</h2>
+            <p>Enlaces útiles para seguir aprendiendo Python</p>
+        </div>
+
+        <ul class="resources-list">
+            <li>
+                <a href="#">
+                    <span class="card-icon">📖</span>
+                    Documentación oficial de Python
+                </a>
+                <p>La fuente más completa y actualizada de información sobre Python.</p>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="card-icon">🎓</span>
+                    Tutoriales interactivos
+                </a>
+                <p>Aprende Python paso a paso con ejercicios prácticos.</p>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="card-icon">🧪</span>
+                    Entornos de programación recomendados
+                </a>
+                <p>IDE y editores populares para desarrollar en Python.</p>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="card-icon">📚</span>
+                    Libros recomendados
+                </a>
+                <p>Selección de los mejores libros para aprender Python desde cero hasta nivel avanzado.</p>
+            </li>
+        </ul>
+    </div>
+    
+
+    
+
+    <footer>
+        <p>Fundamentos de Python - Creado con fines educativos</p>
+        <p>&copy; 2025 - Todos los derechos reservados</p>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">↑</div>
+
+</body>
+</html>
